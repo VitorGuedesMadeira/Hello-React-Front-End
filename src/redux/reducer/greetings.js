@@ -5,13 +5,13 @@ export const getGreetings = createAsyncThunk(
   'greetings/getGreeting',
   async () => {
     const response = await fetch('http://localhost:3000/greetings/random');
-    return response.json()
+    return response.json();
   },
 );
 
 const initialState = {
-    message: [],
-    status: 'idle',
+  message: [],
+  status: 'idle',
 };
 
 // Then, handle actions in your reducers:
@@ -22,11 +22,11 @@ const greetingsSlice = createSlice({
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(getGreetings.fulfilled, (state, action) => {
-        state.message = action.payload;
-        state.status = 'succeeded';
+      state.message = action.payload;
+      state.status = 'succeeded';
     });
-    builder.addCase(getGreetings.pending, (state, action) => {
-        state.status = 'loading';
+    builder.addCase(getGreetings.pending, (state) => {
+      state.status = 'loading';
     });
   },
 });
