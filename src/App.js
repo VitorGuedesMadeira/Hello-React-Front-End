@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Greeting from './components/greeting';
+import 'App.css'
 
 function App() {
   return (
