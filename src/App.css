@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/calibre');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Calibre', sans-serif;
+  font-size: 1.5em;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  background-color: rgb(95, 158, 160, 0.7);
+  padding: 0.5em;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
+  color: white;
+  transition: 0.1s;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
+}
+
+.title:hover {
+  transform: scale(1.05);
+}
