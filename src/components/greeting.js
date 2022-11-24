@@ -10,13 +10,12 @@ function Greeting() {
     anything = greeting;
   }
   if (status === 'loading') {
-    anything = 'loading...';
+    anything = '...';
   }
 
   return (
     <>
-      <h1>Testing:</h1>
-      <p>{anything}</p>
+      <h1 className="title">{anything}</h1>
     </>
   );
 }

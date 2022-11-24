@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getGreetings = createAsyncThunk(
   'greetings/getGreeting',
   async () => {
-    const response = await fetch('http://localhost:3000/greetings/random');
+    const response = await fetch('http://localhost:3000/');
     return response.json();
   },
 );
